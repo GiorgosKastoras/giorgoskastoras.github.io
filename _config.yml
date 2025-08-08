@@ -1,8 +1,9 @@
 # Site settings
 title: George Kastoras # site title
 description: >- # site description
-  He's writing in Bahasa about web technology and experience as a journal 
-  for documentation things that he learned, meet him <a href="https://github.com/piharpi" target="_blank" rel="noopener">@github</a>.
+  I’m a Data Analyst with a Bachelor's degree in Finance. My goal is to transform raw data into meaningful insights that drive smart business decisions.
+I have experience in data analysis and wrangling, using Excel, SQL, and Python to clean and interpret complex datasets. I also specialize in data visualization and storytelling, leveraging Excel, Power BI, and Looker to present insights in a clear and compelling way.
+Beyond technical skills, I excel in collaborative environments, bringing communication, adaptability, and problem-solving abilities to every project. My analytical mindset, attention to detail, and time management help me tackle challenges efficiently and effectively.
 lang: en-US # default lang
 #timezone: Asia/Jakarta # set your timezone
 #image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
