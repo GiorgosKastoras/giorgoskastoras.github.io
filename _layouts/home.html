@@ -3,21 +3,6 @@ layout: default
 home: true
 ---
 
-<h2>Connect with me</h2>
-<p style="font-size: 1.5rem;">
-  <a href="https://github.com/yourusername" target="_blank">
-    <i class="fab fa-github"></i>
-  </a>&nbsp;&nbsp;
-  <a href="https://linkedin.com/in/yourhandle" target="_blank">
-    <i class="fab fa-linkedin"></i>
-  </a>&nbsp;&nbsp;
-  <a href="mailto:your.email@gmail.com">
-    <i class="fas fa-envelope"></i>
-  </a>
-</p>
-
-<hr>
-
 <h3 class="posts-item-note" aria-label="Recent Posts">Recent Posts</h3>
 {%- for post in site.posts limit: site.number_of_posts -%}
 <article class="post-item">
@@ -28,4 +13,17 @@ home: true
 </article>
 {%- endfor -%}
 
+<hr>
 
+<!-- Social Icons Below Post List -->
+<p style="text-align: center; font-size: 1.5rem;">
+  <a href="https://github.com/GiorgosKastoras" target="_blank">
+    <i class="fab fa-github"></i>
+  </a>&nbsp;&nbsp;
+  <a href="https://linkedin.com/in/your-linkedin-handle" target="_blank">
+    <i class="fab fa-linkedin"></i>
+  </a>&nbsp;&nbsp;
+  <a href="mailto:giorgos.kastoras@gmail.com">
+    <i class="fas fa-envelope"></i>
+  </a>
+</p>
