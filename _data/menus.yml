@@ -7,7 +7,7 @@
   external: false
 
 - title: Projects
-  url: /about/
+  url: /projects/
   external: false # set true if you using external link, see below
 
 # Example:
