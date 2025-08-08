@@ -3,6 +3,20 @@ layout: default
 home: true
 ---
 
+<h1>Hello, I'm John Doe</h1>
+<p>I'm a data analyst focused on cleaning, modeling, and visualizing data.</p>
+
+<h2>Connect with me</h2>
+<p>
+  <a href="https://github.com/yourusername"><i class="fab fa-github fa-lg"></i></a>
+  &nbsp;&nbsp;
+  <a href="https://www.linkedin.com/in/yourhandle"><i class="fab fa-linkedin fa-lg"></i></a>
+  &nbsp;&nbsp;
+  <a href="mailto:your.email@gmail.com"><i class="fas fa-envelope fa-lg"></i></a>
+</p>
+
+<hr>
+
 <h3 class="posts-item-note" aria-label="Recent Posts">Recent Posts</h3>
 {%- for post in site.posts limit: site.number_of_posts -%}
 <article class="post-item">
@@ -12,3 +26,4 @@ home: true
   </h4>
 </article>
 {%- endfor -%}
+
