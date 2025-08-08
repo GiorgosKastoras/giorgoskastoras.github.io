@@ -15,11 +15,11 @@ mode: dark
 author:
   name: George Kastoras
   bio: >-
-    I’m a data analyst focused on transforming data into business insights. I work with Excel, SQL, Python, Power BI, and Looker to clean, model, and visualize data for decision-making.
-  username: giorgoskastoras
+    I’m a data analyst focused on transforming data into business insights.
+  #username: giorgoskastoras
   github: GiorgosKastoras
-  twitter: 
-  facebook: 
+  #twitter: 
+  #facebook: 
   email: giorgos.kastoras@gmail.com
   #avatar: /assets/img/avatar.jpg
 
