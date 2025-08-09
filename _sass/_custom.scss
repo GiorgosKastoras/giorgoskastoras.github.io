@@ -1,0 +1,52 @@
+/* NAV: remove red focus box + thick underline on active/focus */
+.menu .menu-link {
+  position: relative;
+  padding-bottom: .25rem;
+}
+
+.menu .menu-link:focus,
+.menu .menu-link:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* underline for active page + keyboard focus */
+.menu .menu-link.active::after,
+.menu .menu-link[aria-current="page"]::after,
+.menu .menu-link:focus-visible::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -0.55rem;
+  width: 40px;   /* adjust length */
+  height: 3px;   /* adjust thickness */
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* POSTS: remove red focus box, add subtle highlight on hover/focus */
+.post-item {
+  border-radius: 6px;
+  transition: background-color .15s ease, color .15s ease;
+  padding: .15rem .35rem;
+  margin-left: -.35rem;
+  margin-right: -.35rem;
+}
+
+.post-item-title a {
+  text-decoration: none;
+}
+
+.post-item-title a:focus,
+.post-item-title a:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* highlight whole row on hover or keyboard focus */
+.post-item:hover,
+.post-item-title a:focus-visible {
+  background: #0d0d0d;
+  color: #fff;
+}
