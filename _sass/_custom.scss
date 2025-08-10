@@ -44,7 +44,7 @@ body:not([data-theme="dark"]) .post-item-title a:focus-visible {
   /* Stack items and give comfy tap targets */
   .menu .menu-link {
     display: block;
-    padding: 0.5rem 0 0.25rem;        /* adjust if you want tighter/looser */
+    padding: 0.5rem 0 0.10rem;        /* adjust if you want tighter/looser */
   }
 
   /* Kill the ::after underline on mobile */
