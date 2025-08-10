@@ -38,3 +38,22 @@ body:not([data-theme="dark"]) .post-item-title a:focus-visible {
   background: #f3f3f3;   /* light gray highlight instead of full black */
   color: inherit;
 }
+
+/* Mobile menu spacing & underline position */
+@media (max-width: 768px) {
+  /* make each link a block with extra bottom space */
+  .menu .menu-link {
+    display: block;
+    padding: 0.6rem 0 1.0rem;   /* add bottom padding to push the next item down */
+  }
+
+  /* pull the underline closer to its own link so it doesn't touch the next item */
+  .menu .menu-link.active::after,
+  .menu .menu-link[aria-current="page"]::after,
+  .menu .menu-link:focus-visible::after {
+    bottom: -0.2rem;            /* was ~ -0.55rem; move it up */
+    width: 40px;                /* keep your chosen underline length */
+    height: 3px;                /* and thickness */
+  }
+}
+
