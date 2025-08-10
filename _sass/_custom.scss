@@ -44,7 +44,7 @@ body:not([data-theme="dark"]) .post-item-title a:focus-visible {
   /* Stack items and give comfy tap targets */
   .menu .menu-link {
     display: block;
-    padding: 0.75rem 0;        /* adjust if you want tighter/looser */
+    padding: 0.5rem 0 0.25rem;        /* adjust if you want tighter/looser */
   }
 
   /* Kill the ::after underline on mobile */
@@ -59,7 +59,7 @@ body:not([data-theme="dark"]) .post-item-title a:focus-visible {
   .menu .menu-link.active,
   .menu .menu-link[aria-current="page"],
   .menu .menu-link:focus-visible {
-    border-bottom: 4px solid currentColor;  /* make 3–5px to taste */
+    border-bottom: 3px solid currentColor;  /* make 3–5px to taste */
   }
 }
 
