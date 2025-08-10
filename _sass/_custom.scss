@@ -39,21 +39,28 @@ body:not([data-theme="dark"]) .post-item-title a:focus-visible {
   color: inherit;
 }
 
-/* Mobile menu spacing & underline position */
+/* ===== Mobile nav: replace underline with thick bottom border on active ===== */
 @media (max-width: 768px) {
-  /* make each link a block with extra bottom space */
+  /* Stack items and give comfy tap targets */
   .menu .menu-link {
     display: block;
-    padding: 0.6rem 0 1.0rem;   /* add bottom padding to push the next item down */
+    padding: 0.75rem 0;        /* adjust if you want tighter/looser */
   }
 
-  /* pull the underline closer to its own link so it doesn't touch the next item */
+  /* Kill the ::after underline on mobile */
+  .menu .menu-link::after,
   .menu .menu-link.active::after,
   .menu .menu-link[aria-current="page"]::after,
   .menu .menu-link:focus-visible::after {
-    bottom: -0.2rem;            /* was ~ -0.55rem; move it up */
-    width: 40px;                /* keep your chosen underline length */
-    height: 3px;                /* and thickness */
+    content: none !important;
+  }
+
+  /* Active/focused item: thick bottom border that matches text color */
+  .menu .menu-link.active,
+  .menu .menu-link[aria-current="page"],
+  .menu .menu-link:focus-visible {
+    border-bottom: 4px solid currentColor;  /* make 3–5px to taste */
   }
 }
+
 
