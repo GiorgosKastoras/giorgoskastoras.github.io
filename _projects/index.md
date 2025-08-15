@@ -2,7 +2,7 @@
 title: Agrifood CO₂ Emission Analysis
 date: 2025-02-15
 layout: post
-description: Cultivating Change: Data Insights on Agrifood Emissions
+description: Cultivating Change Data Insights on Agrifood Emissions
 ---
 
 # Cultivating Change: Data Insights on Agrifood Emissions
