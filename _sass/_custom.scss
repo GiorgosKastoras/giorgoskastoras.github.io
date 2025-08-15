@@ -63,4 +63,41 @@ body:not([data-theme="dark"]) .post-item-title a:focus-visible {
   }
 }
 
+/* ----- Ordered list spacing & alignment (projects/blog) ----- */
+.post-content ol,
+.page-content ol,
+main ol {
+  list-style: decimal !important;      /* real 1,2,3… */
+  list-style-position: outside;        /* number sits outside the text block */
+  margin: 0 0 1rem 1.5rem;             /* left indent for numbers */
+  padding: 0;
+}
+
+.post-content ol li,
+.page-content ol li,
+main ol li {
+  margin: 0 0 0.9rem 0;                /* vertical space between items */
+}
+
+/* align first line with the number: remove top margin on first child */
+.post-content ol li > *:first-child,
+.page-content ol li > *:first-child,
+main ol li > *:first-child {
+  margin-top: 0 !important;
+}
+
+/* tidy paragraphs inside list items */
+.post-content ol li > p,
+.page-content ol li > p,
+main ol li > p {
+  margin: 0.25rem 0 0.35rem;
+}
+
+/* optional: make the number a touch bolder */
+.post-content ol li::marker,
+.page-content ol li::marker,
+main ol li::marker {
+  font-weight: 600;
+}
+
 
