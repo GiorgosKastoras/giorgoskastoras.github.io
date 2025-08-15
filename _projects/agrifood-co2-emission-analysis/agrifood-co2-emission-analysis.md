@@ -41,6 +41,7 @@ The dataset utilized in this project consists of **one main table** with **31 co
 - **CO2 emissions and urban population have exhibited a consistent upward trend, suggesting a strong correlation between urbanization and emissions.**
 
 ![CO2 Emissions by Continent and Category](https://raw.githubusercontent.com/GiorgosKastoras/agrifood-co2-emission-analysis/refs/heads/main/Images/co2_emissions_overview.png)
+
 ![Urbanization and Temperature Trends](https://raw.githubusercontent.com/GiorgosKastoras/agrifood-co2-emission-analysis/refs/heads/main/Images/urban_temp_trends.png)
 
 ---
@@ -80,6 +81,7 @@ The dataset utilized in this project consists of **one main table** with **31 co
 - **In 1997, Indonesian peat fires released 0.81 to 2.57 gigatons of CO2, accounting for 40% of global fossil fuel emissions that year.**
 
 ![Importance of Forestland](https://raw.githubusercontent.com/GiorgosKastoras/agrifood-co2-emission-analysis/refs/heads/main/Images/importance_forestland.png)
+
 ![Fire-Related Emissions](https://raw.githubusercontent.com/GiorgosKastoras/agrifood-co2-emission-analysis/refs/heads/main/Images/fire_emissions_trends.png)
 
 ---
