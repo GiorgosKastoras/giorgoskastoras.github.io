@@ -40,8 +40,8 @@ The dataset utilized in this project consists of **one main table** with **31 co
 - **56% of CO2 emissions are attributed to agrifood system-related practices, indicating the sector's significant impact.**
 - **CO2 emissions and urban population have exhibited a consistent upward trend, suggesting a strong correlation between urbanization and emissions.**
 
-![CO2 Emissions by Continent and Category](https://github.com/GiorgosKastoras/agrifood-co2-emission-analysis/blob/main/Images/co2_emissions_overview.png)
-![Urbanization and Temperature Trends](https://github.com/GiorgosKastoras/agrifood-co2-emission-analysis/blob/main/Images/urban_temp_trends.png)
+![CO2 Emissions by Continent and Category](https://raw.githubusercontent.com/GiorgosKastoras/agrifood-co2-emission-analysis/refs/heads/main/Images/co2_emissions_overview.png)
+![Urbanization and Temperature Trends](https://raw.githubusercontent.com/GiorgosKastoras/agrifood-co2-emission-analysis/refs/heads/main/Images/urban_temp_trends.png)
 
 ---
 
@@ -53,7 +53,7 @@ The dataset utilized in this project consists of **one main table** with **31 co
 - **Long-Term Trend:** Emissions increase over years, aligning with industrialization and deforestation.
 - **Policy Implication:** Global trends emphasize the need for sustainable agro-food policies.
 
-![Climate Equation: CO₂, Population, and Temperature Shifts](https://github.com/GiorgosKastoras/agrifood-co2-emission-analysis/blob/main/Images/climate_equation.png)
+![Climate Equation: CO₂, Population, and Temperature Shifts](https://raw.githubusercontent.com/GiorgosKastoras/agrifood-co2-emission-analysis/refs/heads/main/Images/climate_equation.png)
 
 
 ### Major and Minor CO2 Emitters
@@ -62,7 +62,7 @@ The dataset utilized in this project consists of **one main table** with **31 co
 - **New Caledonia is the lowest emitter, with just 27K total CO2 emissions.**
 - **Only Congo, among the top emitters, is not within the 10 most populous countries.**
 
-![Largest & Lowest CO2 Emitters](https://github.com/GiorgosKastoras/agrifood-co2-emission-analysis/blob/main/Images/largest_lowest_emitters.png)
+![Largest & Lowest CO2 Emitters](https://raw.githubusercontent.com/GiorgosKastoras/agrifood-co2-emission-analysis/refs/heads/main/Images/largest_lowest_emitters.png)
 
 ### Top & Bottom CO2 Emission Factors
 
@@ -70,7 +70,7 @@ The dataset utilized in this project consists of **one main table** with **31 co
 - **Agrifood systems, waste disposal, and household food consumption are significant factors.**
 - **Pesticide manufacturing is the least polluting factor, followed by fires in humid tropical regions.**
 
-![Top & Bottom CO2 Emission Factors](https://github.com/GiorgosKastoras/agrifood-co2-emission-analysis/blob/main/Images/top_bottom_co2_factors.png)
+![Top & Bottom CO2 Emission Factors](https://raw.githubusercontent.com/GiorgosKastoras/agrifood-co2-emission-analysis/refs/heads/main/Images/top_bottom_co2_factors.png)
 
 ### Forestland & Fire-Related Emissions
 
@@ -79,8 +79,8 @@ The dataset utilized in this project consists of **one main table** with **31 co
 - **Fire-related emissions fluctuate over time, with peaks in humid tropical areas due to deforestation and wildfires.**
 - **In 1997, Indonesian peat fires released 0.81 to 2.57 gigatons of CO2, accounting for 40% of global fossil fuel emissions that year.**
 
-![Importance of Forestland](https://github.com/GiorgosKastoras/agrifood-co2-emission-analysis/blob/main/Images/importance_forestland.png)
-![Fire-Related Emissions](https://github.com/GiorgosKastoras/agrifood-co2-emission-analysis/blob/main/Images/fire_emissions_trends.png)
+![Importance of Forestland](https://raw.githubusercontent.com/GiorgosKastoras/agrifood-co2-emission-analysis/refs/heads/main/Images/importance_forestland.png)
+![Fire-Related Emissions](https://raw.githubusercontent.com/GiorgosKastoras/agrifood-co2-emission-analysis/refs/heads/main/Images/fire_emissions_trends.png)
 
 ---
 
