@@ -1,0 +1,95 @@
+# Site settings
+title: George Kastoras
+description: >-
+  I’m a Data Analyst with a Bachelor's degree in Finance. My goal is to transform raw data into meaningful insights that drive smart business decisions.
+  I have experience in data analysis and wrangling, using Excel, SQL, and Python to clean and interpret complex datasets. I also specialize in data visualization and storytelling, leveraging Excel, Power BI, and Looker to present insights in a clear and compelling way.
+  Beyond technical skills, I excel in collaborative environments, bringing communication, adaptability, and problem-solving abilities to every project. My analytical mindset, attention to detail, and time management help me tackle challenges efficiently and effectively.
+
+lang: en-US
+#timezone: Europe/Athens
+#image: assets/img/ogp.png
+#repo: https://github.com/GiorgosKastoras/giorgoskastoras.github.io
+mode: dark
+
+# Profile settings
+author:
+  name: George Kastoras
+  bio: >-
+    I’m a data analyst in Athens focused on transforming raw data into meaningful insights that drive smart business decisions.
+  #username: giorgoskastoras
+  github: GiorgosKastoras
+  #twitter: 
+  #facebook: 
+  email: giorgos.kastoras@gmail.com
+  #avatar: /assets/img/avatar.jpg
+
+# URL settings
+url: "https://giorgoskastoras.github.io"
+baseurl:
+permalink: /:title/
+google_analytics:
+fb_appid:
+
+# Collection setting
+collections:
+  posts:
+    output: true
+  projects:
+    output: true
+
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  syntax_highlighter: rouge
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: post
+      comments: false
+
+# Jekyll Compose default front matter
+jekyll_compose:
+  post_default_front_matter:
+    modified:
+    tags: []
+    description:
+  draft_default_front_matter:
+    modified:
+    tags: []
+    description:
+
+# Homepage limit posts
+number_of_posts: 5
+
+# Build settings
+# theme: klise
+sass:
+  style: compressed
+
+include:
+  - _redirects
+  - .htaccess
+
+exclude:
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - CHANGELOG.md
+  - README.md
+  - node_modules
+  - CODE_OF_CONDUCT.md
+  - CONTRIBUTING.md
+  - lighthouse.png
+  - klise-*.gem
+  - klise.gemspec
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-postfiles

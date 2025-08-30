@@ -1,0 +1,103 @@
+/* NAV underline: use currentColor so it works in dark & light */
+.menu .menu-link {
+  position: relative;
+  padding-bottom: .25rem;
+}
+.menu .menu-link:focus,
+.menu .menu-link:focus-visible { outline: none !important; box-shadow: none !important; }
+
+.menu .menu-link.active::after,
+.menu .menu-link[aria-current="page"]::after,
+.menu .menu-link:focus-visible::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -0.55rem;
+  width: 40px;           /* length of the underline */
+  height: 3px;           /* thickness */
+  background: currentColor; /* 👈 auto-contrasts in both themes */
+  border-radius: 2px;
+}
+
+/* Post rows: subtle highlight per theme, no red focus box */
+.post-item { border-radius: 6px; transition: background-color .15s ease, color .15s ease; }
+.post-item-title a { text-decoration: none; }
+.post-item-title a:focus, .post-item-title a:focus-visible { outline: none !important; box-shadow: none !important; }
+
+/* Dark theme hover */
+body[data-theme="dark"] .post-item:hover,
+body[data-theme="dark"] .post-item-title a:focus-visible {
+  background: #0d0d0d;
+  color: #fff;
+}
+
+/* Light theme hover */
+body:not([data-theme="dark"]) .post-item:hover,
+body:not([data-theme="dark"]) .post-item-title a:focus-visible {
+  background: #f3f3f3;   /* light gray highlight instead of full black */
+  color: inherit;
+}
+
+/* ===== Mobile nav: replace underline with thick bottom border on active ===== */
+@media (max-width: 768px) {
+  /* Stack items and give comfy tap targets */
+  .menu .menu-link {
+    display: block;
+    padding: 0.5rem 0 0.10rem;        /* adjust if you want tighter/looser */
+  }
+
+  /* Kill the ::after underline on mobile */
+  .menu .menu-link::after,
+  .menu .menu-link.active::after,
+  .menu .menu-link[aria-current="page"]::after,
+  .menu .menu-link:focus-visible::after {
+    content: none !important;
+  }
+
+  /* Active/focused item: thick bottom border that matches text color */
+  .menu .menu-link.active,
+  .menu .menu-link[aria-current="page"],
+  .menu .menu-link:focus-visible {
+    border-bottom: 3px solid currentColor;  /* make 3–5px to taste */
+  }
+}
+
+/* ----- Ordered list spacing & alignment (projects/blog) ----- */
+.post-content ol,
+.page-content ol,
+main ol {
+  list-style: decimal !important;      /* real 1,2,3… */
+  list-style-position: outside;        /* number sits outside the text block */
+  margin: 0 0 1rem 1.5rem;             /* left indent for numbers */
+  padding: 0;
+}
+
+.post-content ol li,
+.page-content ol li,
+main ol li {
+  margin: 0 0 0.9rem 0;                /* vertical space between items */
+}
+
+/* align first line with the number: remove top margin on first child */
+.post-content ol li > *:first-child,
+.page-content ol li > *:first-child,
+main ol li > *:first-child {
+  margin-top: 0 !important;
+}
+
+/* tidy paragraphs inside list items */
+.post-content ol li > p,
+.page-content ol li > p,
+main ol li > p {
+  margin: 0.25rem 0 0.35rem;
+}
+
+/* optional: make the number a touch bolder */
+.post-content ol li::marker,
+.page-content ol li::marker,
+main ol li::marker {
+  font-weight: 600;
+}
+
+

@@ -1,0 +1,16 @@
+- title: Index
+  url: /
+  external: false
+
+- title: Blog
+  url: /archive/
+  external: false
+
+- title: Projects
+  url: /projects/
+  external: false # set true if you using external link, see below
+
+# Example:
+# - title: github
+#   url: https://github.com/piharpi/jekyll-klise
+#   external: true
