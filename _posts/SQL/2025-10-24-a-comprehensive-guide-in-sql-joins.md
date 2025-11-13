@@ -9,9 +9,9 @@ Join is an operation performed on the relations or tables that combine rows from
 
 The three pillars:
 
-1. **Grain:** What does one row represent in each table?  
-2. **Key(s):** Which columns uniquely identify a row (primary key) and connect tables (foreign key)?  
-3. **Cardinality:** one to one (1-1), one to many (1 - *), many to many (* - *).
+1. **Grain** – What does one row represent in each table?  
+2. **Key(s)** – Which columns uniquely identify a row (primary key) and connect tables (foreign key)?  
+3. **Cardinality** – one to one (`1-1`), one to many (`1-*`), many to many (`*-*`).
 
 ---
 
@@ -293,9 +293,8 @@ Everything you do should preserve or intentionally change this grain.
 
 * State the join keys and the expected relationship:
 
-  * fact → dim = many → one
-  * fact → fact (e.g., sales ↔ promotions) = many ↔ many (danger — pre-aggregate!)
-
+  * `fact` → `dim` = many → one
+  * `fact` → `fact` (e.g., sales ↔ promotions) = many ↔ many (danger — pre-aggregate!)
 * If it’s not 1:1 or many:1, decide before joining:
 
   * Pre-aggregate the many side to the driver’s keys, or
