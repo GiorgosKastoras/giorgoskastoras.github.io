@@ -1,18 +1,17 @@
 ---
 layout: post
 title: A Comprehensive Guide in SQL Joins
-date: 2025-11-13
+date: 2025-10-24
 permalink: /a-comprehensive-guide-in-sql-joins/
 ---
 
 Join is an operation that combines rows from two or more tables based on related columns.
 
-<strong>The three pillars:</strong>
-<ol>
-  <li><strong>Grain:</strong> What does one row represent in each table?</li>
-  <li><strong>Key(s):</strong> Which columns uniquely identify a row (primary key) and connect tables (foreign key)?</li>
-  <li><strong>Cardinality:</strong> one-to-one (1-1), one-to-many (1-*), many-to-many (*-*).</li>
-</ol>
+**The three pillars:**
+- **Grain** — What does one row represent in each table?
+- **Key(s)** — Which columns uniquely identify a row (primary key) and connect tables (foreign key)?
+- **Cardinality** — one-to-one (1-1), one-to-many (1-*), many-to-many (*-*).
+
 
 ## Type of Joins
 
@@ -120,7 +119,7 @@ FULL OUTER JOIN Orders o ON o.Customer_ID = c.Customer_ID;
 |           3 | Carol         |     NULL |   NULL |
 |        NULL | NULL          |      103 |     20 |
 
-## Other types of Joins
+## Other Types of Joins
 
 ### SELF JOIN
 
@@ -192,7 +191,7 @@ CROSS JOIN Subjects t;
 
 ### SEMI JOIN
 
-Return left-table rows that have a match in the right table; only left columns are returned.
+Returns left-table rows that have a match in the right table; only left columns are returned.
 
 **Query**
 
@@ -216,7 +215,7 @@ WHERE EXISTS (
 
 ### ANTI JOIN
 
-Return left-table rows that have **no** match in the right table.
+Returns left-table rows that have **no** match in the right table.
 
 **Query**
 
@@ -237,7 +236,7 @@ WHERE o.Customer_ID IS NULL;
 ## Join Mindset
 
 1. **Start with the end in mind (declare the grain).**
-   Target grain example: “one row per (store_id, sku, date)”.
+   Example: one row per `(store_id, sku, date)`.
 
 2. **Pick a driving table (and be explicit why).**
    Use LEFT when data quality isn’t guaranteed; INNER when referential integrity is trusted.
@@ -358,11 +357,14 @@ LEFT JOIN sales_30 s USING (store_id, sku);
 
 **Mental checklist**
 
-* Result **grain**? Driver **table**?
-* **Keys** & **cardinality** clear?
-* Presence/absence vs enrichment?
-* Right-side filters in **ON**?
-* Need **pre-aggregation**?
-* How do **NULLs** affect totals?
-* Quick dup/row-count checks?
-* Any performance wins (filter early, partition/cluster)?
+* What’s my **result grain**?
+* What’s the **driver** table?
+* What are the **keys** and the **cardinality**?
+* Do I need **presence/absence** (`EXISTS` / `NOT EXISTS`) or **enrichment** (`JOIN`)?
+* Are right-side filters in the **ON** clause?
+* Do I need to **pre-aggregate** to avoid duplication?
+* How do **NULLs** affect logic and totals?
+* Quick **row-count & dup** checks after each step.
+* Any **performance** wins (filter early, select few, partitions/cluster)?
+* Does the output still match the declared grain?
+
