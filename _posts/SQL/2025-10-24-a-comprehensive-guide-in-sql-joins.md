@@ -1,22 +1,23 @@
 ---
 layout: post
-title:  A Comprehensive Guide in SQL Joins
-date:   2025-10-24
+title: A Comprehensive Guide in SQL Joins
+date: 2025-10-24
+permalink: /a-comprehensive-guide-in-sql-joins/
 ---
 
 
 Join is an operation performed on the relations or tables that combine rows from two or more relations or tables based on the related columns between them.
 
 The three pillars:
-1. Grain: What does one row represent in each table?
-2. Key(s) : Which columns uniquely identify a row (primary key) and connect tables (foreign key)?
-3. Cardinality: one to one (1-1) , one to many (1 - *) , many to many (* - *)
+1) Grain: What does one row represent in each table?
+2) Key(s) : Which columns uniquely identify a row (primary key) and connect tables (foreign key)?
+3) Cardinality: one to one (1-1) , one to many (1 - *) , many to many (* - *)
 ---
 
 ## Type of Joins:
 ￼
 
-1. **JOIN (INNER):** Returns records that have matching values in both tables.   —Note: If a row in one table doesn’t have a corresponding row in another, it’s excluded from the final result.
+  **JOIN (INNER):** Returns records that have matching values in both tables.   —Note: If a row in one table doesn’t have a corresponding row in another, it’s excluded from the final result.
 
    **Example tables (before):**
 
@@ -50,7 +51,7 @@ The three pillars:
    | 101 | 1 | Alice | 50 |
    | 102 | 1 | Alice | 30 |
 
-2. **LEFT JOIN :** Returns all records from the left table, and the matched records from the right table.  — Note: If there is no match, NULL values are returned for columns from the right table.
+  **LEFT JOIN :** Returns all records from the left table, and the matched records from the right table.  — Note: If there is no match, NULL values are returned for columns from the right table.
 
    **Example tables (before):** *(same as above)*
 
@@ -70,7 +71,7 @@ The three pillars:
    | 2 | Bob | NULL | NULL |
    | 3 | Carol | NULL | NULL |
 
-3. **RIGHT JOIN:** Returns all records from the right table, and the matched records from the left table.
+   **RIGHT JOIN:** Returns all records from the right table, and the matched records from the left table.
 
    **Example tables (before):** *(same as above)*
 
@@ -89,7 +90,7 @@ The three pillars:
    | 1 | Alice | 102 | 30 |
    | NULL | NULL | 103 | 20 |
 
-4. **FULL OUTER JOIN (FULL JOIN) :** Returns all records when there is a match in either left or right table.
+   **FULL OUTER JOIN (FULL JOIN) :** Returns all records when there is a match in either left or right table.
 
    **Example tables (before):** *(same as above)*
 
@@ -156,8 +157,8 @@ Unlike other joins, it doesn't need any matching requirements. A CROSS JOIN, for
 ￼
 
 **Key points to remember:**
-1. No condition required, it combines every row from both tables automatically
-2. Cartesian Product, it creates all possible combinations of rows. So, if a table has m rows and the table has n rows, the results will have m * n rows
+- No condition required, it combines every row from both tables automatically
+- Cartesian Product, it creates all possible combinations of rows. So, if a table has m rows and the table has n rows, the results will have m * n rows
 
    **Example tables (before):**
 
@@ -279,6 +280,7 @@ Write a one-liner before you query:
 * Combinations: `CROSS JOIN` (only when intentional).
 
 > Rule of thumb: If the question is “Does a match exist?” → use `EXISTS`.
+
 > If the question is “Bring me attributes/measures” → use `JOIN` (pre-agg when needed).
 
 5) Put filters in the right place (ON vs WHERE)
@@ -402,16 +404,16 @@ LEFT JOIN sales_30 s USING (store_id, sku);
 
 12) Mental checklist
 
-1. What’s my **result grain**?
-2. What’s the **driver** table?
-3. What are the **keys** and the **cardinality**?
-4. Do I need **presence/absence** (EXISTS / NOT EXISTS) or **enrichment** (JOIN)?
-5. Are right-side filters in the **ON** clause?
-6. Do I need to **pre-aggregate** to avoid duplication?
-7. How do **NULLs** affect logic and totals?
-8. Quick **row-count & dup** checks after each step.
-9. Any **performance** wins (filter early, select few, partitions/cluster)?
-10. Does the output still match the declared grain?
+- What’s my **result grain**?
+- What’s the **driver** table?
+- What are the **keys** and the **cardinality**?
+- Do I need **presence/absence** (EXISTS / NOT EXISTS) or **enrichment** (JOIN)?
+- Are right-side filters in the **ON** clause?
+- Do I need to **pre-aggregate** to avoid duplication?
+- How do **NULLs** affect logic and totals?
+- Quick **row-count & dup** checks after each step.
+- Any **performance** wins (filter early, select few, partitions/cluster)?
+- Does the output still match the declared grain?
 
 ￼
 
