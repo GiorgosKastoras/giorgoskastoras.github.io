@@ -235,21 +235,21 @@ WHERE o.Customer_ID IS NULL;
 
 ## Join Mindset
 
-1. **Start with the end in mind (declare the grain).**
+1) **Start with the end in mind (declare the grain).**
    Example: one row per `(store_id, sku, date)`.
 
-2. **Pick a driving table (and be explicit why).**
+2) **Pick a driving table (and be explicit why).**
    Use LEFT when data quality isn’t guaranteed; INNER when referential integrity is trusted.
 
-3. **Make keys & cardinality explicit.**
+3) **Make keys & cardinality explicit.**
 
    * fact→dim = many→one
    * fact→fact = many↔many → pre-aggregate the many side.
 
-4. **Choose the right pattern.**
+4) **Choose the right pattern.**
    Enrich: LEFT/INNER · Presence: `EXISTS` (SEMI) · Absence: `LEFT … WHERE right IS NULL` or `NOT EXISTS` (ANTI) · Reconciliation: FULL · Combinations: CROSS (intentional).
 
-5. **Put filters in the right place (ON vs WHERE).**
+5) **Put filters in the right place (ON vs WHERE).**
 
 ```sql
 -- GOOD: keeps unmatched promos as NULL (true LEFT)
@@ -259,7 +259,7 @@ LEFT JOIN promo pr
 -- BAD: WHERE pr.start_dt ...  -- turns LEFT into INNER
 ```
 
-6. **Aggregate at the correct moment (pre-agg many side).**
+6) **Aggregate at the correct moment (pre-agg many side).**
 
 ```sql
 WITH pr_by_sale AS (
@@ -275,10 +275,10 @@ FROM fact_sales s
 LEFT JOIN pr_by_sale p USING (sale_id);
 ```
 
-7. **Treat NULLs deliberately.**
+7) **Treat NULLs deliberately.**
    `NULL = NULL` is unknown; use `COALESCE` only when correct.
 
-8. **Scaffolds help robustness.**
+8) **Scaffolds help robustness.**
 
 ```sql
 WITH frame AS (
